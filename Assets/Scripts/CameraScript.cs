@@ -7,13 +7,17 @@ using TMPro;
 
 public class Photo {
     public RenderTexture image;
-    public string plantName;
+    public string species;
+    public string description;
+    public string habitat;
 }
 
 public class CameraScript : MonoBehaviour
 {
     [SerializeField]
     private int maxStoredImages = 3;
+    [SerializeField]
+    private float maxDetectionDistance = 1f; // Maximum distance for plant detection
     private int currentStoredImages = 0;
     [SerializeField]
     private GameObject plantHolder;
@@ -71,7 +75,7 @@ public class CameraScript : MonoBehaviour
         // Store the snapshot
         Photo newPhoto = new Photo();
         newPhoto.image = renderTexture;
-        newPhoto.plantName = IdentifyPlant(); // Call the plant identification function
+        IdentifyPlant(newPhoto); // Call the plant identification function
 
         if (currentStoredImages >= photos.Length)
         {
@@ -95,7 +99,7 @@ public class CameraScript : MonoBehaviour
         
         currentStoredImages++;
         imageCountText.text = "Pictures taken: " + currentStoredImages + "/" + maxStoredImages;
-        plantNameText.text = "Plant detected:\n - " + newPhoto.plantName; // Update the plant name text
+        plantNameText.text = "Plant detected:\n - " + newPhoto.species; // Update the plant name text
         if (currentStoredImages >= maxStoredImages)
         {
             statusText.text = "Status: Full!";
@@ -110,7 +114,10 @@ public class CameraScript : MonoBehaviour
             deepCopy[i] = new Photo
             {
                 image = CopyRenderTexture(photos[i].image), // Create a new RenderTexture and copy the data
-                plantName = photos[i].plantName // Direct assignment as strings are immutable
+                species = photos[i].species, // Direct assignment as strings are immutable
+                description = photos[i].description, // Direct assignment as strings are immutable
+                habitat = photos[i].habitat // Direct assignment as strings are immutable
+                
             };
         }
         return deepCopy;
@@ -125,19 +132,28 @@ public class CameraScript : MonoBehaviour
         statusText.text = "Status: Ready";
     }
 
-    private string IdentifyPlant() {
+    private void IdentifyPlant(Photo photo) {
 
-        // Loop trough the plantHolder children to find the ones that are in the camera view
+        // Loop through the plantHolder children to find the ones that are in the camera view and within maxDetectionDistance
         foreach (Transform child in plantHolder.transform) {
             // Check if the child is within the camera's view frustum
             Vector3 screenPoint = cameraComponent.WorldToViewportPoint(child.position);
             if (screenPoint.x >= 0 && screenPoint.x <= 1 && screenPoint.y >= 0 && screenPoint.y <= 1 && screenPoint.z > 0) {
-                // If the child is in view, return its name
-                return child.name;
+                // Check if the child is within the maximum detection distance
+                float distance = Vector3.Distance(cameraComponent.transform.position, child.position);
+                if (distance <= maxDetectionDistance) {
+                    // If the child is in view and within range, return its name
+                    photo.species = child.GetComponent<PlantScript>().species; // Assuming the PlantScript has a species field
+                    photo.description = child.GetComponent<PlantScript>().description; // Assuming the PlantScript has a species field
+                    photo.habitat = child.GetComponent<PlantScript>().habitat; // Assuming the PlantScript has a species field
+                    return; // Exit the loop after finding the first plant
+                }
             }
         }
 
-        return "No plant detected";
+        photo.species = "No plant detected"; // Default value if no plant is found
+        photo.description = "";
+        photo.habitat = "";
     }
 
     private RenderTexture CopyRenderTexture(RenderTexture source)

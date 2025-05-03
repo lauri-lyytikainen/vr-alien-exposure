@@ -17,6 +17,10 @@ public class ComputerScript : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI plantNameText;
     [SerializeField]
+    private TextMeshProUGUI plantDescriptionText;
+    [SerializeField]
+    private TextMeshProUGUI plantHabitatText;
+    [SerializeField]
     private CameraScript cameraScript;
 
     // Start is called before the first frame update
@@ -60,9 +64,13 @@ public class ComputerScript : MonoBehaviour
     private void UpdateImageText() {
         imageCountText.text = photos.Length + " Images stored \n Currently viewing image " + (pictureIndex + 1);
         if (photos.Length > 0) {
-            plantNameText.text = "Plant name: " + photos[pictureIndex].plantName;
+            plantNameText.text = "Plant name: " + photos[pictureIndex].species;
+            plantDescriptionText.text = "Description: " + photos[pictureIndex].description;
+            plantHabitatText.text = "Habitat: " + photos[pictureIndex].habitat;
         } else {
-            plantNameText.text = "No images available";
+            plantNameText.text = "Plant name: ";
+            plantDescriptionText.text = "Description: ";
+            plantHabitatText.text = "Habitat: ";
         }
     }
 

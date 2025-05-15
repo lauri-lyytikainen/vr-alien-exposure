@@ -22,7 +22,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1010061153974613481, guid: 442b9463eb7b46a4e940ca457ce35991, type: 3}
       propertyPath: description
-      value: Its a glowing flower
+      value: Its a glowing flower. It's glow suggest they thrive at night.
       objectReference: {fileID: 0}
     - target: {fileID: 1063424086948150548, guid: 442b9463eb7b46a4e940ca457ce35991, type: 3}
       propertyPath: m_Materials.Array.data[0]

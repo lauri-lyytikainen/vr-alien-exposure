@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1010061153974613481, guid: 442b9463eb7b46a4e940ca457ce35991, type: 3}
       propertyPath: habitat
-      value: Flat ground
+      value: Sandy open areas
       objectReference: {fileID: 0}
     - target: {fileID: 1010061153974613481, guid: 442b9463eb7b46a4e940ca457ce35991, type: 3}
       propertyPath: species
@@ -18,7 +18,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1010061153974613481, guid: 442b9463eb7b46a4e940ca457ce35991, type: 3}
       propertyPath: description
-      value: Its a spiral bush
+      value: Its a spiral bush. Could their shape relate to wind somehow?
       objectReference: {fileID: 0}
     - target: {fileID: 2530558009582567059, guid: 442b9463eb7b46a4e940ca457ce35991, type: 3}
       propertyPath: m_LocalScale.x

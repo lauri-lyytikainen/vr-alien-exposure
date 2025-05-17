@@ -27,6 +27,8 @@ public class CameraScript : MonoBehaviour
     private Photo[] photos;
     [SerializeField]
     private RawImage previewImage;
+    [SerializeField]
+    private AudioSource shutterSound;
     private TextMeshProUGUI imageCountText;
     private TextMeshProUGUI plantNameText;
     private TextMeshProUGUI statusText;
@@ -61,6 +63,11 @@ public class CameraScript : MonoBehaviour
         if (currentStoredImages >= maxStoredImages)
         {
             return;
+        }
+        // Play the shutter sound
+        if (shutterSound != null)
+        {
+            shutterSound.Play();
         }
 
         // Create and activate the render texture

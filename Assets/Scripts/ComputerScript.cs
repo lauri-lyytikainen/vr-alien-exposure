@@ -21,6 +21,10 @@ public class ComputerScript : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI plantHabitatText;
     [SerializeField]
+    private TextMeshProUGUI plantCountText;
+    [SerializeField]
+    private int plantTotal = 6;
+    [SerializeField]
     private CameraScript cameraScript;
 
     // Start is called before the first frame update
@@ -61,16 +65,42 @@ public class ComputerScript : MonoBehaviour
         previewImage.texture = texture;
     }
 
-    private void UpdateImageText() {
+    private void UpdateImageText()
+    {
         imageCountText.text = photos.Length + " Images stored \n Currently viewing image " + (pictureIndex + 1);
-        if (photos.Length > 0) {
+        if (photos.Length > 0)
+        {
             plantNameText.text = "Plant name: " + photos[pictureIndex].species;
             plantDescriptionText.text = "Description: " + photos[pictureIndex].description;
             plantHabitatText.text = "Habitat: " + photos[pictureIndex].habitat;
-        } else {
+        }
+        else
+        {
             plantNameText.text = "Plant name: ";
             plantDescriptionText.text = "Description: ";
             plantHabitatText.text = "Habitat: ";
+        }
+        int uniquePlants = 0;
+        Dictionary<string, int> plantCounts = new Dictionary<string, int>();
+        for (int i = 0; i < photos.Length; i++)
+        {
+            if (plantCounts.ContainsKey(photos[i].species))
+            {
+                plantCounts[photos[i].species]++;
+            }
+            else
+            {
+                plantCounts[photos[i].species] = 1;
+                uniquePlants++;
+            }
+        }
+        if (uniquePlants == plantTotal)
+        {
+            plantCountText.text = "All plant species discovered!";
+        }
+        else
+        {
+             plantCountText.text = plantTotal - uniquePlants + " plant species left to discover";
         }
     }
 

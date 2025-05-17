@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1010061153974613481, guid: 442b9463eb7b46a4e940ca457ce35991, type: 3}
       propertyPath: species
-      value: Mushroom 1
+      value: Cone Mushroom
       objectReference: {fileID: 0}
     - target: {fileID: 1010061153974613481, guid: 442b9463eb7b46a4e940ca457ce35991, type: 3}
       propertyPath: description

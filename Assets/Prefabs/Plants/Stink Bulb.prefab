@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &660325287048188465
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 854785953480482853, guid: 442b9463eb7b46a4e940ca457ce35991, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1764176827769415397, guid: 041c68b1a38a1af47a5a65a69549f0ae, type: 3}
+    - target: {fileID: 1010061153974613481, guid: 442b9463eb7b46a4e940ca457ce35991, type: 3}
+      propertyPath: habitat
+      value: Hopefully away from any living creature
+      objectReference: {fileID: 0}
+    - target: {fileID: 1010061153974613481, guid: 442b9463eb7b46a4e940ca457ce35991, type: 3}
+      propertyPath: species
+      value: Stink Bulb
+      objectReference: {fileID: 0}
+    - target: {fileID: 1010061153974613481, guid: 442b9463eb7b46a4e940ca457ce35991, type: 3}
+      propertyPath: description
+      value: A large growth that emits a horrible stench. Ew.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1063424086948150548, guid: 442b9463eb7b46a4e940ca457ce35991, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2eed79cdfc86e294491ad6d5e1d48815, type: 2}
+    - target: {fileID: 2530558009582567059, guid: 442b9463eb7b46a4e940ca457ce35991, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2530558009582567059, guid: 442b9463eb7b46a4e940ca457ce35991, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2530558009582567059, guid: 442b9463eb7b46a4e940ca457ce35991, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2530558009582567059, guid: 442b9463eb7b46a4e940ca457ce35991, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2530558009582567059, guid: 442b9463eb7b46a4e940ca457ce35991, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2530558009582567059, guid: 442b9463eb7b46a4e940ca457ce35991, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2530558009582567059, guid: 442b9463eb7b46a4e940ca457ce35991, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2530558009582567059, guid: 442b9463eb7b46a4e940ca457ce35991, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2530558009582567059, guid: 442b9463eb7b46a4e940ca457ce35991, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2530558009582567059, guid: 442b9463eb7b46a4e940ca457ce35991, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3494064812337592961, guid: 442b9463eb7b46a4e940ca457ce35991, type: 3}
+      propertyPath: m_Name
+      value: Stink Bulb
+      objectReference: {fileID: 0}
+    - target: {fileID: 6213999703665681763, guid: 442b9463eb7b46a4e940ca457ce35991, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6213999703665681763, guid: 442b9463eb7b46a4e940ca457ce35991, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6213999703665681763, guid: 442b9463eb7b46a4e940ca457ce35991, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6213999703665681763, guid: 442b9463eb7b46a4e940ca457ce35991, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071069
+      objectReference: {fileID: 0}
+    - target: {fileID: 6213999703665681763, guid: 442b9463eb7b46a4e940ca457ce35991, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.70710677
+      objectReference: {fileID: 0}
+    - target: {fileID: 6213999703665681763, guid: 442b9463eb7b46a4e940ca457ce35991, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5289574847405550284, guid: 442b9463eb7b46a4e940ca457ce35991, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 442b9463eb7b46a4e940ca457ce35991, type: 3}
